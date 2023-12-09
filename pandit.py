@@ -1,20 +1,16 @@
-﻿# F-strings helps to embed python code inside a string.
-# They helps us in formatting the strings.
-# Introduced in Python version 3.6
-
-name = "Python Pandit"
-place = "India"
+﻿name = "Python Pandit"
+place = "Bharat"
 age = 26
 
 def how_to_use():
     # Instead of this
-    print("My name is " + name) # not an f-string
+    print("My name is " + name)
 
-    # Do this for same output
+    # Do this for the same output
     print(f"My name is {name}")
 
     # i.e. we add letter 'f' before defining a string
-    #  and we use curly braces to embed python code
+    #  and we add curly braces to embed python code
 
 def easy_print_variables():
     # Instead of this
@@ -22,16 +18,16 @@ def easy_print_variables():
     print(f"place = {place}")
     print(f"age = {age}")
 
-    # Do this for same output
+    # Do this for the same output
     print(f"{name = }")
     print(f"{place = }")
     print(f"{age = }")
 
     # i.e. just adding '=' after variable name inside
-    #  curly braces will print the variable name with
-    #  the value
+    # curly braces will print the variable name with
+    # the value
 
-def arithmetic_and_conversions():
+def arithmetic_and_conversion():
     # Arithmetic operation
     num1 = 80
     num2 = 20
@@ -50,19 +46,18 @@ def arithmetic_and_conversions():
     not_my_money = 123456789
     print(f"{not_my_money = :,}")
 
-
 def datetime_to_string():
     from datetime import datetime
 
-    today_date = datetime.now() # Get today's date
+    now = datetime.now()
 
     # Instead of this
-    formatted_date_1 = today_date.strftime("%Y-%m-%d %H:%M:%S")
+    formatted_date_1 = now.strftime("%Y-%b-%d %H:%M:%S")
     print(f"{formatted_date_1 = }")
 
-    # You can also try this
-    formatted_date_2 = f"{today_date: %Y-%m-%d %H:%M:%S}"
-    print(f"{formatted_date_1 = }")
+    # you can try this
+    formatted_date_2 = f"{now:%Y-%b-%d %H:%M:%S}"
+    print(f"{formatted_date_2 = }")
 
 def other_methods_of_str_format():
     # Using str.format()
@@ -71,6 +66,7 @@ def other_methods_of_str_format():
 
     # Using % operator
     print("My name is %s, I am %d" % (name, age))   # %s means string variable and %d means int variable
+
 
 def speed_comparison():
     import timeit
@@ -97,9 +93,4 @@ def speed_comparison():
 
 
 if __name__ == '__main__':
-    how_to_use()
-    easy_print_variables()
-    arithmetic_and_conversions()
-    datetime_to_string()
-    other_methods_of_str_format()
     speed_comparison()
