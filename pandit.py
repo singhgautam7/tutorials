@@ -44,7 +44,7 @@ def arithmetic_and_conversion():
 
     # Comma separated integer
     not_my_money = 123456789
-    print(f"{not_my_money = :,}")
+    print(f"{not_my_money = :0,}")
 
 def datetime_to_string():
     from datetime import datetime
