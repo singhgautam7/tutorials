@@ -6,7 +6,6 @@ def calculate_time(function):
         function()
         end = time.time()
         print(f"Total runtime of {function.__name__} = {end - begin}")
-
     return inner
 
 @calculate_time
